@@ -26,12 +26,12 @@ export default function LandingPage() {
   useKeyboardShortcut("?", () => setIsShortcutsOpen((prev) => !prev));
 
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 flex flex-col selection:bg-indigo-500 selection:text-white">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 flex flex-col selection:bg-indigo-500 selection:text-white w-full max-w-full overflow-x-hidden">
       {/* Top Navigation */}
       <Navbar onOpenCommandPalette={() => setIsCommandPaletteOpen(true)} />
 
       {/* Main Content Area */}
-      <main id="main-content" className="flex-1">
+      <main id="main-content" className="flex-1 w-full max-w-full min-w-0">
         {/* 1. Hero Section */}
         <Hero />
 

@@ -35,22 +35,22 @@ export const Hero: React.FC = () => {
   };
 
   return (
-    <section className="relative overflow-hidden pt-12 pb-20 sm:pt-20 sm:pb-28">
-      {/* Ambient Gradient Glow Backgrounds */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] sm:w-[900px] h-[400px] sm:h-[500px] bg-gradient-to-tr from-indigo-500/20 via-violet-500/15 to-cyan-500/20 blur-[120px] -z-10 pointer-events-none rounded-full" />
+    <section className="relative overflow-hidden pt-8 pb-16 sm:pt-20 sm:pb-28 max-w-full">
+      {/* Ambient Gradient Glow Backgrounds (Contained) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[340px] sm:w-[800px] h-[300px] sm:h-[500px] bg-gradient-to-tr from-indigo-500/20 via-violet-500/15 to-cyan-500/20 blur-[90px] sm:blur-[120px] -z-10 pointer-events-none rounded-full max-w-full" />
 
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 text-center space-y-6 sm:space-y-8 w-full min-w-0">
         {/* Sample Data Disclaimer & Product Badge */}
-        <div className="flex flex-col items-center gap-2">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 text-xs font-semibold shadow-xs">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Next-Gen Multi-Model AI Productivity Assistant</span>
+        <div className="flex flex-col items-center gap-2 max-w-full">
+          <div className="inline-flex items-center gap-1.5 sm:gap-2 px-3 py-1.5 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 text-[11px] sm:text-xs font-semibold shadow-xs max-w-full">
+            <Sparkles className="w-3.5 h-3.5 shrink-0" />
+            <span className="truncate">Next-Gen Multi-Model AI Productivity Assistant</span>
           </div>
           <SampleDataBadge variant="subtle" text="Sample performance telemetry & model suite" />
         </div>
 
         {/* Main Headline */}
-        <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1] max-w-4xl mx-auto">
+        <h1 className="text-3xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.15] max-w-4xl mx-auto break-words">
           All Frontier AI Models.{" "}
           <span className="bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 bg-clip-text text-transparent">
             One Persistent Side Panel.
@@ -58,15 +58,15 @@ export const Hero: React.FC = () => {
         </h1>
 
         {/* Sub-headline */}
-        <p className="text-base sm:text-xl text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-sm sm:text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto leading-relaxed break-words">
           Switch effortlessly between <strong>GPT-4o</strong>, <strong>Claude 3.5 Sonnet</strong>, <strong>Gemini 1.5 Pro</strong>, and <strong>DeepSeek R1</strong> without leaving your current browser tab.
         </p>
 
-        {/* Dynamic Interactive Prompt Pill */}
-        <div className="max-w-xl mx-auto p-1.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 backdrop-blur-xl shadow-lg flex items-center justify-between gap-3 text-left">
-          <div className="flex items-center gap-2 pl-3 truncate">
+        {/* Dynamic Interactive Prompt Pill with strict min-w-0 flexbox containment */}
+        <div className="w-full max-w-xl mx-auto p-1.5 rounded-2xl bg-white/80 dark:bg-slate-900/80 border border-slate-200/80 dark:border-slate-800 backdrop-blur-xl shadow-lg flex items-center justify-between gap-2 sm:gap-3 text-left min-w-0">
+          <div className="flex items-center gap-2 pl-2 sm:pl-3 truncate min-w-0 flex-1">
             <Sparkles className="w-4 h-4 text-indigo-500 shrink-0" />
-            <span className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 truncate font-mono">
+            <span className="text-[11px] sm:text-sm text-slate-700 dark:text-slate-300 truncate font-mono min-w-0 flex-1">
               &quot;{samplePrompts[activePromptIndex]}&quot;
             </span>
           </div>
@@ -75,20 +75,20 @@ export const Hero: React.FC = () => {
             onClick={() =>
               setActivePromptIndex((prev) => (prev + 1) % samplePrompts.length)
             }
-            className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition shrink-0 cursor-pointer"
+            className="px-2.5 py-1 rounded-xl bg-slate-100 dark:bg-slate-800 text-[10px] sm:text-[11px] font-semibold text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-950 transition shrink-0 cursor-pointer whitespace-nowrap"
           >
             Next Prompt →
           </button>
         </div>
 
         {/* Dual CTA Buttons */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-2">
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-1">
           <Link href="/app" className="w-full sm:w-auto">
             <Button
               size="lg"
               leftIcon={<MessageSquare className="w-5 h-5" />}
               rightIcon={<ArrowRight className="w-4 h-4" />}
-              className="w-full sm:w-auto text-base shadow-lg shadow-indigo-500/25"
+              className="w-full sm:w-auto text-sm sm:text-base shadow-lg shadow-indigo-500/25"
             >
               Launch Web App
             </Button>
@@ -99,7 +99,7 @@ export const Hero: React.FC = () => {
               size="lg"
               variant="glass"
               leftIcon={<ChromeIcon className="w-5 h-5 text-indigo-500" />}
-              className="w-full sm:w-auto text-base border-slate-300 dark:border-slate-700"
+              className="w-full sm:w-auto text-sm sm:text-base border-slate-300 dark:border-slate-700"
             >
               Try Chrome Extension
             </Button>
@@ -107,7 +107,7 @@ export const Hero: React.FC = () => {
         </div>
 
         {/* Social Proof & Trust Badges */}
-        <div className="pt-8 flex flex-wrap items-center justify-center gap-6 sm:gap-10 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/60 dark:border-slate-800/60 max-w-3xl mx-auto">
+        <div className="pt-6 sm:pt-8 flex flex-wrap items-center justify-center gap-4 sm:gap-10 text-xs text-slate-500 dark:text-slate-400 border-t border-slate-200/60 dark:border-slate-800/60 max-w-3xl mx-auto">
           <div className="flex items-center gap-1.5">
             <div className="flex text-amber-400">
               {[...Array(5)].map((_, i) => (

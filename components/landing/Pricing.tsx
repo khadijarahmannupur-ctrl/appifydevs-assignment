@@ -79,16 +79,16 @@ export const Pricing: React.FC = () => {
   ];
 
   return (
-    <section id="pricing" className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
-      <div className="text-center space-y-3 mb-12">
+    <section id="pricing" className="py-12 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0 overflow-hidden">
+      <div className="text-center space-y-3 mb-10 sm:mb-12 max-w-full min-w-0">
         <div className="flex flex-col items-center gap-1.5">
           <Badge variant="primary">Simple, Transparent Pricing</Badge>
           <SampleDataBadge variant="subtle" text="Sample pricing tier structure" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white break-words">
           One Subscription. All AI Models.
         </h2>
-        <p className="text-xs sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto break-words">
           Save over $60/month compared to paying for separate ChatGPT, Claude, and Gemini subscriptions.
         </p>
 

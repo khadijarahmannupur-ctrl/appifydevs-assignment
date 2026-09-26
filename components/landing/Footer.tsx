@@ -35,24 +35,24 @@ export const Footer: React.FC = () => {
   };
 
   return (
-    <footer className="pt-16 pb-12 bg-white dark:bg-[#070A11] border-t border-slate-200 dark:border-slate-800/80">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-16">
+    <footer className="pt-12 sm:pt-16 pb-12 bg-white dark:bg-[#070A11] border-t border-slate-200 dark:border-slate-800/80 overflow-hidden w-full max-w-full">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 space-y-12 sm:space-y-16 w-full min-w-0">
         {/* Final Conversion CTA Banner */}
-        <div className="relative rounded-3xl p-8 sm:p-12 overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-violet-900 text-white shadow-2xl">
-          <div className="absolute top-0 right-0 w-96 h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative rounded-3xl p-6 sm:p-12 overflow-hidden bg-gradient-to-r from-indigo-900 via-indigo-800 to-violet-900 text-white shadow-2xl max-w-full min-w-0">
+          <div className="absolute top-0 right-0 w-64 sm:w-96 h-64 sm:h-96 bg-cyan-500/20 rounded-full blur-3xl pointer-events-none max-w-full" />
+          <div className="absolute bottom-0 left-0 w-64 sm:w-96 h-64 sm:h-96 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none max-w-full" />
 
-          <div className="relative z-10 max-w-3xl space-y-4 text-center sm:text-left">
+          <div className="relative z-10 max-w-3xl space-y-4 text-center sm:text-left min-w-0">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-xs font-semibold text-indigo-200">
-              <Sparkles className="w-3.5 h-3.5" />
+              <Sparkles className="w-3.5 h-3.5 shrink-0" />
               <span>Experience Next-Gen Productivity</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight">
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight break-words">
               Ready to supercharge your workflow with EchoGPT?
             </h2>
 
-            <p className="text-sm sm:text-base text-indigo-100 max-w-xl leading-relaxed">
+            <p className="text-xs sm:text-base text-indigo-100 max-w-xl leading-relaxed break-words">
               Launch the full web workspace or install the Chrome Extension to experience effortless multi-model AI.
             </p>
 

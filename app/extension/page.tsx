@@ -17,42 +17,43 @@ import {
 
 export default function ExtensionPage() {
   return (
-    <div className="min-h-screen bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 flex flex-col">
+    <div className="min-h-screen bg-slate-50 dark:bg-[#0B0F19] text-slate-900 dark:text-slate-100 flex flex-col w-full max-w-full overflow-x-hidden">
       {/* Top Banner Notice */}
       <SampleDataBadge variant="banner" />
 
       {/* Top Header Navigation */}
-      <header className="px-4 sm:px-8 py-4 border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md sticky top-0 z-30 flex items-center justify-between gap-4">
-        <div className="flex items-center gap-4">
+      <header className="px-3 sm:px-8 py-3 sm:py-4 border-b border-slate-200 dark:border-slate-800 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md sticky top-0 z-30 flex items-center justify-between gap-2 sm:gap-4 w-full max-w-full min-w-0">
+        <div className="flex items-center gap-2 sm:gap-4 min-w-0">
           <Link
             href="/"
-            className="flex items-center gap-1.5 text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-white transition"
+            className="flex items-center gap-1 text-xs font-semibold text-slate-500 hover:text-slate-900 dark:hover:text-white transition shrink-0"
           >
-            <ArrowLeft className="w-4 h-4" />
-            <span>Landing Page</span>
+            <ArrowLeft className="w-3.5 h-3.5" />
+            <span className="hidden xs:inline">Landing</span>
           </Link>
-          <span className="text-slate-300 dark:text-slate-700">/</span>
-          <div className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center text-white text-xs font-bold shadow-xs">
+          <span className="text-slate-300 dark:text-slate-700 hidden xs:inline">/</span>
+          <div className="flex items-center gap-1.5 sm:gap-2 truncate min-w-0">
+            <div className="w-6 h-6 rounded-lg bg-gradient-to-tr from-indigo-600 to-violet-600 flex items-center justify-center text-white text-xs font-bold shadow-xs shrink-0">
               <ChromeIcon className="w-3.5 h-3.5" />
             </div>
-            <h1 className="text-sm font-bold text-slate-900 dark:text-white">
-              EchoGPT Chrome Extension Prototype
+            <h1 className="text-xs sm:text-sm font-bold text-slate-900 dark:text-white truncate min-w-0">
+              EchoGPT Extension Prototype
             </h1>
           </div>
         </div>
 
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <Link href="/app">
-            <Button size="sm" variant="outline" className="text-xs">
-              Open Full Web App →
+            <Button size="sm" variant="outline" className="text-xs px-2.5 py-1 sm:px-3 sm:py-1.5">
+              <span className="hidden sm:inline">Open Full Web App →</span>
+              <span className="sm:hidden">Web App →</span>
             </Button>
           </Link>
         </div>
       </header>
 
       {/* Main Extension Showcase Container */}
-      <main id="main-content" className="flex-1 p-4 sm:p-8 max-w-7xl mx-auto w-full space-y-8">
+      <main id="main-content" className="flex-1 p-3.5 sm:p-8 max-w-7xl mx-auto w-full space-y-6 sm:space-y-8 min-w-0">
         {/* Intro Header */}
         <div className="text-center max-w-2xl mx-auto space-y-2">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 dark:bg-indigo-950/60 border border-indigo-200 dark:border-indigo-800/60 text-indigo-600 dark:text-indigo-400 text-xs font-medium">

@@ -75,7 +75,7 @@ export const ModelSelector: React.FC<ModelSelectorProps> = ({
       {isOpen && (
         <div
           role="listbox"
-          className="absolute left-0 mt-2 w-72 sm:w-84 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-2 z-50 animate-in fade-in zoom-in-95 duration-150 max-h-[80vh] overflow-y-auto"
+          className="absolute left-0 mt-2 w-72 sm:w-84 max-w-[calc(100vw-2rem)] rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-2xl p-2 z-50 animate-in fade-in zoom-in-95 duration-150 max-h-[80vh] overflow-y-auto"
         >
           <div className="px-3 py-2 border-b border-slate-100 dark:border-slate-800 mb-1">
             <p className="text-xs font-semibold text-slate-900 dark:text-white">Frontier AI Models</p>

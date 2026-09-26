@@ -10,16 +10,16 @@ import { cn } from "@/lib/utils";
 
 export const ModelShowcase: React.FC = () => {
   return (
-    <section className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
-      <div className="text-center space-y-3 mb-12">
+    <section className="py-12 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0 overflow-hidden">
+      <div className="text-center space-y-3 mb-10 sm:mb-12 max-w-full min-w-0">
         <div className="flex flex-col items-center gap-1.5">
           <Badge variant="purple">Frontier Model Intelligence</Badge>
           <SampleDataBadge variant="subtle" text="Sample benchmark telemetry" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white break-words">
           Powered by Industry-Leading AI Models
         </h2>
-        <p className="text-xs sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto break-words">
           Never be locked into a single provider. Switch seamlessly based on the complexity, latency, and context required for your task.
         </p>
       </div>

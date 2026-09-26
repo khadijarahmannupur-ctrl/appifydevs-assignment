@@ -19,16 +19,16 @@ export const Testimonials: React.FC = () => {
   });
 
   return (
-    <section className="py-16 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6">
-      <div className="text-center space-y-3 mb-10">
+    <section className="py-12 sm:py-24 max-w-6xl mx-auto px-4 sm:px-6 w-full min-w-0 overflow-hidden">
+      <div className="text-center space-y-3 mb-10 max-w-full min-w-0">
         <div className="flex flex-col items-center gap-1.5">
           <Badge variant="purple">Loved by Power Users</Badge>
           <SampleDataBadge variant="subtle" text="Sample user testimonials" />
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white">
+        <h2 className="text-2xl sm:text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white break-words">
           Trusted by Top Engineers & Researchers
         </h2>
-        <p className="text-xs sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-base text-slate-500 dark:text-slate-400 max-w-2xl mx-auto break-words">
           Discover how developers leverage EchoGPT to supercharge coding, research, and writing without switching tabs.
         </p>
 
